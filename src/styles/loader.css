@@ -1,0 +1,102 @@
+/* loader.css */
+/* Loader container */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+  }
+  
+  /* Fade-out effect */
+  #loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Video background */
+  #loader video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place video behind other content */
+  }
+  
+  /* Black overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1; /* Place overlay above video but below loader content */
+  }
+  
+  /* Loader content */
+  .loader-content {
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 2; /* Ensure content is above overlay */
+  }
+  
+  /* Car container */
+  .car-container { 
+    width: 200px; 
+    height: 100px; 
+    animation: rotateCar 4s linear infinite; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  /* Car image */
+  .car {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Rotate car animation */
+  @keyframes rotateCar {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  
+  /* Spinner animation - Enhanced with scaling */
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, pulse 2s ease-in-out infinite;
+    margin: 0 auto 15px auto;
+  }
+  
+  /* Spinner animation keyframes */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Pulse animation keyframes */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }

@@ -1,0 +1,105 @@
+.car__item {
+  border: 1px solid #7c8a9736;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.car__item-info span i {
+  color: #d164e2;
+  font-size: 1.1rem;
+}
+
+.car__item-btn {
+  border-radius: 8px; /* Add rounded corners */
+  border: none;
+  outline: none;
+  background: #eb2172;
+  padding: 8px 16px;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  cursor: pointer;
+}
+
+.car__item-btn:hover {
+  background: #d61d5f; /* Darker shade of red on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Elevate shadow */
+}
+
+.car__item-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out; /* Smooth text color transition */
+}
+
+.car__item-btn a:hover {
+  color: #ffebf0; /* Light pinkish white on hover for contrast */
+}
+
+.car__btn-details {
+  background: #f9a826;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.car__btn-rent {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.car__item-content h4 {
+  font-size: 1.8rem;
+}
+
+.car__item-content h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 992px) {
+  .car__item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .car__item h6 {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .car__item-info {
+    flex-wrap: wrap;
+  }
+
+  .car__item-info span {
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .car__item-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .car__item h4 {
+    font-size: 1rem;
+  }
+
+  .car__item h6 {
+    font-size: 0.9rem;
+  }
+
+  .car__item-info span {
+    font-size: 0.7rem;
+  }
+
+  .car__item-info span i {
+    font-size: 0.9rem;
+  }
+
+  .car__item-btn {
+    font-size: 0.8rem;
+  }
+}

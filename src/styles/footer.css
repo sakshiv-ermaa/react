@@ -1,0 +1,168 @@
+.footer {
+  background: linear-gradient(60deg, #4a00e0, #8e2de2); /* Default gradient */
+  background-size: 200% 200%; /* Larger size for animation */
+  animation: gradientShift 6s infinite; /* Animation applied */
+  padding: 50px 15px 20px;
+  color: #f8f9fa; /* Soft white text color */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Gradient Keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
+  animation: pulse 10s infinite alternate;
+  z-index: 1;
+  pointer-events: none;
+}
+.footer::after {
+  background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 70%);
+  animation: pulse 15s infinite alternate-reverse;
+}
+
+/* Pulse Animation Keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+.footer__logo i {
+  color: #ffc107; /* Gold color for icons */
+  font-size: 1.5rem;
+}
+
+.footer__logo span {
+  color: #f8f9fa;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.footer__logo-content {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 15px;
+  line-height: 1.8rem;
+}
+
+.quick__link {
+  border: none !important;
+  background: transparent !important;
+}
+
+.quick__link a {
+  color: rgba(248, 249, 250, 0.85);
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+}
+
+.quick__link a:hover {
+  color: #ffc107;
+  text-shadow: 0 2px 5px rgba(255, 193, 7, 0.8); /* Glow effect */
+  transform: scale(1.05); /* Slight hover scaling */
+}
+
+.footer__link-title {
+  color: #f8f9fa;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.office__info {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  background: rgba(72, 61, 139, 0.7); /* Soft purple background */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.newsletter:hover {
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.8); /* Gold glowing effect */
+}
+
+.newsletter input {
+  background: transparent;
+  color: #f8f9fa;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.newsletter input:focus {
+  transform: scale(1.05); /* Scaling on focus */
+}
+
+.newsletter span i {
+  color: #ffc107;
+  font-size: 1.5rem;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 15px;
+  margin-top: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+.footer__bottom p:hover {
+  color: #ffc107;
+  text-shadow: 0 1px 3px rgba(255, 193, 7, 0.8); /* Glow on hover */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer__logo-content,
+  .quick__link,
+  .office__info {
+    font-size: 0.85rem;
+  }
+
+  .footer__link-title {
+    font-size: 1rem;
+  }
+
+  .footer__bottom p {
+    font-size: 0.8rem;
+  }
+}

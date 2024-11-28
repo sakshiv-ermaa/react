@@ -1,0 +1,104 @@
+.slider__item {
+  max-width: 100%;
+  height: 650px;
+  background-attachment: fixed; /* Parallax effect */
+  animation: fadeIn 1s ease-in; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slide up effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slider__item-01 {
+  background: linear-gradient(rgb(0, 13, 107, 0.5), rgba(185, 50, 226, 0.5)),
+    url("../assets/all-images/slider-img/slider-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-02 {
+  background: linear-gradient(rgb(0, 13, 107, 0.5), rgba(185, 50, 226, 0.5)),
+    url("../assets/all-images/slider-img/slider-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-03 {
+  background: linear-gradient(rgb(0, 13, 107, 0.5), rgba(185, 50, 226, 0.5)),
+    url("../assets/all-images/slider-img/slider-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__slider {
+  overflow: hidden;
+}
+
+.slider__content {
+  padding-top: 150px;
+}
+
+.slider__content h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  animation: fadeIn 1s ease-in; /* Fade-in animation for text */
+}
+
+.reserve__btn {
+  background: #fff !important;
+  color: rgb(185, 50, 226) !important;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reserve__btn a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #e124de;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reserve__btn:hover {
+  background: #050d4f;
+  color: #fff;
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 992px) {
+  .slider__item {
+    height: 530px;
+    max-width: 100vw;
+  }
+
+  .slider__content {
+    margin-top: -50px;
+  }
+
+  .slider__content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider__item {
+    height: 450px;
+  }
+
+  .slider__content h1 {
+    font-size: 1.5rem;
+  }
+}
